@@ -37,15 +37,6 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list && \
     apt-get update && \
     apt-get -y dist-upgrade
 
-RUN apt-get -y install build-essential asciidoc binutils \
-bzip2 gawk gettext git libncurses5-dev libz-dev patch \
-python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 \
-subversion flex uglifyjs git-core gcc-multilib p7zip \
-p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto \
-qemu-utils upx libelf-dev autoconf automake libtool autopoint \
-device-tree-compiler g++-multilib linux-libc-dev \
-language-pack-zh-hans language-pack-gnome-zh-hans
-
 ### Add all install scripts for further steps
 ADD ./src/common/install/ $INST_SCRIPTS/
 ADD ./src/ubuntu/install/ $INST_SCRIPTS/
@@ -74,6 +65,15 @@ ADD ./src/common/xfce/ $HOME/
 RUN $INST_SCRIPTS/libnss_wrapper.sh
 ADD ./src/common/scripts $STARTUPDIR
 RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
+
+RUN apt-get -y install build-essential asciidoc binutils \
+bzip2 gawk gettext git libncurses5-dev libz-dev patch \
+python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 \
+subversion flex uglifyjs git-core gcc-multilib p7zip \
+p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto \
+qemu-utils upx libelf-dev autoconf automake libtool autopoint \
+device-tree-compiler g++-multilib linux-libc-dev \
+language-pack-zh-hans language-pack-gnome-zh-hans
 
 USER 1000
 
