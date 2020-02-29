@@ -23,10 +23,9 @@ It's also possible to run the images in container orchestration platforms like [
 * [OpenShift usage of "headless" VNC Docker images](./openshift/README.md) 
 
 ## Usage
-Usage is **similar** for all provided images, e.g. for `consol/centos-xfce-vnc`:
-
 
 - Run command with mapping to local port `5901` (vnc protocol) and `6901` (vnc web access):
+
 1
 ```bash
 git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Dockerfile&&mv docker-xfce-vnc/Dockerfile.wbt docker-xfce-vnc/Dockerfile&&docker build -t ysp/xfce-vnc docker-xfce-vnc
