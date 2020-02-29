@@ -25,25 +25,24 @@ It's also possible to run the images in container orchestration platforms like [
 ## Usage
 Usage is **similar** for all provided images, e.g. for `consol/centos-xfce-vnc`:
 
-- Print out help page:
-
-      docker run consol/centos-xfce-vnc --help
 
 - Run command with mapping to local port `5901` (vnc protocol) and `6901` (vnc web access):
 
-      docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
+  git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Dockerfile&&mv docker-xfce-vnc/Dockerfile.wbt docker-xfce-vnc/Dockerfile&&docker build -t ysp/xfce-vnc docker-xfce-vnc
   
-- Change the default user and group within a container to your own with adding `--user $(id -u):$(id -g)`:
-
-      docker run -d -p 5901:5901 -p 6901:6901 --user $(id -u):$(id -g) consol/centos-xfce-vnc
-
-- If you want to get into the container use interactive mode `-it` and `bash`
-      
-      docker run -it -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc bash
-
-- Build an image from scratch:
-
-      docker build -t consol/centos-xfce-vnc centos-xfce-vnc
+docker run -d \
+--name=test \
+--dns=192.168.123.1 \
+--hostname=test \
+--shm-size=2g \
+--user=1000 \
+--restart unless-stopped \
+-p 5901:5901 \
+-p 6901:6901 \
+-e TZ="Asia/Shanghai" \
+-e VNC_RESOLUTION=1400x900 \
+-e VNC_PW=85993542 \
+ysp/xfce-vnc
 
 # Connect & Control
 If the container is started like mentioned above, connect via one of these options:
