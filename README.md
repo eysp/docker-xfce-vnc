@@ -27,9 +27,12 @@ Usage is **similar** for all provided images, e.g. for `consol/centos-xfce-vnc`:
 
 
 - Run command with mapping to local port `5901` (vnc protocol) and `6901` (vnc web access):
-
- * git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Dockerfile&&mv docker-xfce-vnc/Dockerfile.wbt docker-xfce-vnc/Dockerfile&&docker build -t ysp/xfce-vnc docker-xfce-vnc
-  
+1
+```bash
+git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Dockerfile&&mv docker-xfce-vnc/Dockerfile.wbt docker-xfce-vnc/Dockerfile&&docker build -t ysp/xfce-vnc docker-xfce-vnc
+```  
+2
+```bash
 docker run -d \
 --name=test \
 --dns=192.168.123.1 \
@@ -43,7 +46,7 @@ docker run -d \
 -e VNC_RESOLUTION=1400x900 \
 -e VNC_PW=85993542 \
 ysp/xfce-vnc
-
+```
 # Connect & Control
 If the container is started like mentioned above, connect via one of these options:
 
