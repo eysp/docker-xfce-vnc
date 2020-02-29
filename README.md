@@ -11,7 +11,7 @@ Each Docker image is installed with the following components:
   * Mozilla Firefox
   * Chromium
   
-![Docker VNC Desktop access via HTML page](.pics/vnc_container_view.png)
+![Docker VNC Desktop access via HTML page](./screen.png)
 
 
 
