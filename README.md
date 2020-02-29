@@ -34,9 +34,8 @@ git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Doc
 2
 ```bash
 docker run -d \
---name=test \
---dns=192.168.123.1 \
---hostname=test \
+--name=ubuntu \
+--hostname=ubuntu-xfce-vnc \
 --shm-size=2g \
 --user=1000 \
 --restart unless-stopped \
@@ -44,7 +43,7 @@ docker run -d \
 -p 6901:6901 \
 -e TZ="Asia/Shanghai" \
 -e VNC_RESOLUTION=1400x900 \
--e VNC_PW=85993542 \
+-e VNC_PW=password \
 ysp/xfce-vnc
 ```
 # Connect & Control
