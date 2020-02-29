@@ -16,22 +16,6 @@ Each Docker image is installed with the following components:
 ## Build Status
 `master`:  [![Build Status MASTER](https://travis-ci.org/ConSol/docker-headless-vnc-container.svg?branch=master)](https://travis-ci.org/ConSol/docker-headless-vnc-container) `dev`: [![Build Status DEV](https://travis-ci.org/ConSol/docker-headless-vnc-container.svg?branch=dev)](https://travis-ci.org/ConSol/docker-headless-vnc-container)
 
-## Current provided OS & UI sessions:
-* `consol/centos-xfce-vnc`: __Centos7 with `Xfce4` UI session__ 
-
-  [![](https://images.microbadger.com/badges/version/consol/centos-xfce-vnc.svg)](https://hub.docker.com/r/consol/centos-xfce-vnc/) [![](https://images.microbadger.com/badges/image/consol/centos-xfce-vnc.svg)](http://microbadger.com/images/consol/centos-xfce-vnc)
-
-* `consol/ubuntu-xfce-vnc`: __Ubuntu with `Xfce4` UI session__
-
-  [![](https://images.microbadger.com/badges/version/consol/ubuntu-xfce-vnc.svg)](https://hub.docker.com/r/consol/ubuntu-xfce-vnc/) [![](https://images.microbadger.com/badges/image/consol/ubuntu-xfce-vnc.svg)](http://microbadger.com/images/consol/ubuntu-xfce-vnc)
-
-* `consol/centos-icewm-vnc`: __Centos7 with `IceWM` UI session__ 
-
-  [![](https://images.microbadger.com/badges/version/consol/centos-icewm-vnc.svg)](https://hub.docker.com/r/consol/centos-icewm-vnc/) [![](https://images.microbadger.com/badges/image/consol/centos-icewm-vnc.svg)](http://microbadger.com/images/consol/centos-icewm-vnc)
-
-* `consol/ubuntu-icewm-vnc`: __Ubuntu with `IceWM` UI session__
-
-  [![](https://images.microbadger.com/badges/version/consol/ubuntu-icewm-vnc.svg)](https://hub.docker.com/r/consol/ubuntu-icewm-vnc/) [![](https://images.microbadger.com/badges/image/consol/ubuntu-icewm-vnc.svg)](http://microbadger.com/images/consol/ubuntu-icewm-vnc)
 
 ## OpenShift / Kubernetes
 
