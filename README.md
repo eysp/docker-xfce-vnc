@@ -28,7 +28,7 @@ Usage is **similar** for all provided images, e.g. for `consol/centos-xfce-vnc`:
 
 - Run command with mapping to local port `5901` (vnc protocol) and `6901` (vnc web access):
 
-  git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Dockerfile&&mv docker-xfce-vnc/Dockerfile.wbt docker-xfce-vnc/Dockerfile&&docker build -t ysp/xfce-vnc docker-xfce-vnc
+ * git clone https://github.com/eysp/docker-xfce-vnc.git&&rm -f docker-xfce-vnc/Dockerfile&&mv docker-xfce-vnc/Dockerfile.wbt docker-xfce-vnc/Dockerfile&&docker build -t ysp/xfce-vnc docker-xfce-vnc
   
 docker run -d \
 --name=test \
