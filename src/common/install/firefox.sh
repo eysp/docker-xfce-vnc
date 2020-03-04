@@ -26,7 +26,7 @@ function instFF() {
             FF_INST=$2
             echo "download Firefox $FF_VERS and install it to '$FF_INST'."
             mkdir -p "$FF_INST"
-            FF_URL=http://releases.mozilla.org/pub/firefox/releases/$FF_VERS/linux-x86_64/en-US/firefox-$FF_VERS.tar.bz2
+            FF_URL=http://releases.mozilla.org/pub/firefox/releases/$FF_VERS/linux-x86_64/zh-CN/firefox-$FF_VERS.tar.bz2
             echo "FF_URL: $FF_URL"
             wget -qO- $FF_URL | tar xvj --strip 1 -C $FF_INST/
             ln -s "$FF_INST/firefox" /usr/bin/firefox
